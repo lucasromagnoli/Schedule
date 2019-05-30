@@ -6,3 +6,7 @@ adonis make:controller name
 adonis route:list
 
 adonis serve -D
+
+Mail
+
+> adonis install @adonisjs/mail
