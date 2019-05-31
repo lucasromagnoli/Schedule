@@ -2,15 +2,19 @@
 
 const File = use('App/Models/File')
 const Helpers = use('Helpers')
+const crypto = require('crypto')
 
 class FileController {
   async store ({ request, response }) {
     try {
       if (!request.file('file')) return
 
-      const upload = request.file('file', { size: '2mb  ' })
-      const fileName = `${Date.now}.${upload.subtype}`
+      const upload = request.file('file', { size: '2mb' })
+      const fileName = `${crypto.randomBytes(10).toString('hex')}.${
+        upload.subtype
+      }`
 
+      console.log('fileName :', fileName)
       await upload.move(Helpers.tmpPath('uploads'), {
         name: fileName
       })
@@ -29,8 +33,8 @@ class FileController {
       return file
     } catch (error) {
       return response
-        .status(error.status)
-        .send({ error: { message: 'Algo deu errado no upload' } })
+        .status(error.status || 400)
+        .send({ error: { message: 'Algo deu errado no upload', err: error } })
     }
   }
 }
