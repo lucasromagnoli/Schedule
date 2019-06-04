@@ -62,3 +62,6 @@ typings/
 
 # Local database
 *.sqlite
+
+#Pasta de arquivos temporarios
+tmp
