@@ -1,0 +1,14 @@
+<h3> Olá {{ username }}, tudo bem ? </h3>
+<p>A tarefa <strong>{{ title }}</strong> acaba de ser atribuida para você</p>
+
+@if(description)
+<p>Descrição: {{ description }} </p>
+@endif
+
+@if(dueDate)
+<p> Com prazo de conclusão até a data: <strong>{{ dueDate }}</strong></p>
+@endif
+
+@if(hasAttachment)
+<p>Não deixe de verificar o arquivo em anexo.</p>
+@endif
