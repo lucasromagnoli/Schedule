@@ -1,0 +1,14 @@
+ Olá {{ username }}, tudo bem ?
+A tarefa {{ title }} acaba de ser atribuida para você
+
+@if(description)
+Descrição: {{ description }}
+@endif
+
+@if(dueDate)
+ Com prazo de conclusão até a data: {{ dueDate }}
+@endif
+
+@if(hasAttachment)
+Não deixe de verificar o arquivo em anexo
+@endif
