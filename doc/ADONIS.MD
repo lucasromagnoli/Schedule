@@ -15,3 +15,4 @@ Mail
 > adonis install @adonisjs/mail
 > adonis install @adonisjs/validator
 > adonis install @adonisjs/antl
+> adonis install adonis-sentry
