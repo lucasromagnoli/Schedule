@@ -29,7 +29,7 @@
     "@adonisjs/validator": "^5.0.6",
     "@sentry/node": "^5.4.0",
     "adonis-sentry": "^1.0.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "sqlite3": "^4.0.8"
   },
   "devDependencies": {
